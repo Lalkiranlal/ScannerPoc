@@ -1,5 +1,6 @@
 package com.example.pancardscanner
 
+import android.net.Uri
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
@@ -36,9 +37,8 @@ actual class PermissionsManager actual constructor(private val callback: Permiss
             }
 
 
+
             PermissionType.GALLERY -> {
-                // Granted by default because in Android GetContent API does not require any
-                // runtime permissions, and i am using it to access gallery in my app
                 callback.onPermissionStatus(
                     permission, PermissionStatus.GRANTED
                 )
